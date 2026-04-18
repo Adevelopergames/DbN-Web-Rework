@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dead By NightLight - Página Oficial</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --panel:#111214;
+      --muted:#bfbfbf;
+      --accent:#f44336; /* cambia aquí el color principal */
+      --accent-2:#1db954; /* color secundario tipo Steam si quieres */
+      --glass: rgba(255,255,255,0.03);
+      --radius:10px;
+      --max-width:1200px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Inter", "Oswald", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, #050505 0%, #0f0f10 100%);
+      color:var(--muted);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding-bottom:40px;
+    }
+
+    /* Contenedor central */
+    .wrap{
+      max-width:var(--max-width);
+      margin:28px auto;
+      padding:20px;
+    }
+
+    /* Header */
+    header.sitebar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:18px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .brand .logo{
+      width:56px;
+      height:56px;
+      background:linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border-radius:8px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:var(--accent);
+      font-size:18px;
+      letter-spacing:1px;
+    }
+    .brand h1{
+      margin:0;
+      font-family: "Oswald", sans-serif;
+      font-size:20px;
+      color:var(--accent);
+      letter-spacing:1px;
+    }
+    .navlinks a{
+      color:var(--muted);
+      text-decoration:none;
+      margin-left:14px;
+      font-weight:600;
+      opacity:0.9;
+    }
+
+    /* Layout principal */
+    .main-grid{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:20px;
+      align-items:start;
+    }
+
+    /* Columna izquierda: ficha */
+    .game-card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    }
+
+    /* Banner */
+    .banner{
+      position:relative;
+      height:320px;
+      background: #222 center/cover no-repeat;
+      display:flex;
+      align-items:flex-end;
+      padding:18px;
+    }
+    .banner .banner-overlay{
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.0) 30%, rgba(0,0,0,0.7) 100%);
+    }
+    .banner .banner-content{
+      position:relative;
+      z-index:2;
+      display:flex;
+      gap:16px;
+      width:100%;
+      align-items:end;
+      justify-content:space-between;
+    }
+
+    .banner-left{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .banner-left img.logo-small{
+      width:120px;
+      height:120px;
+      object-fit:cover;
+      border-radius:8px;
+      border:2px solid rgba(255,255,255,0.04);
+      background:var(--glass);
+    }
+    .banner-left .meta{
+      color:var(--muted);
+    }
+    .banner-left h2{
+      margin:0 0 6px 0;
+      color:var(--accent);
+      font-family:"Oswald",sans-serif;
+      font-size:22px;
+    }
+    .banner-left p{margin:0;font-size:13px;color:#cfcfcf;opacity:0.9}
+
+    /* Panel de acciones */
+    .actions{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .btn{
+      background:linear-gradient(180deg,var(--accent), #b32b2b);
+      color:white;
+      padding:12px 18px;
+      border-radius:8px;
+      font-weight:700;
+      text-decoration:none;
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      box-shadow: 0 6px 18px rgba(244,67,54,0.12);
+      border: none;
+      cursor:pointer;
+    }
+    .btn.secondary{
+      background:transparent;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,0.04);
+      font-weight:600;
+      padding:10px 14px;
+    }
+
+    /* Info rápida tipo Steam */
+    .info-row{
+      display:flex;
+      gap:12px;
+      margin-top:14px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .info-card{
+      background:rgba(255,255,255,0.02);
+      padding:10px 12px;
+      border-radius:8px;
+      min-width:140px;
+      color:var(--muted);
+      font-size:13px;
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+    .info-card strong{color:#fff;font-weight:700}
+    .info-card .label{font-size:12px;color:#bdbdbd}
+
+    /* Contenido principal debajo del banner */
+    .game-body{
+      padding:18px;
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:18px;
+    }
+
+    .description{
+      background:transparent;
+      color:var(--muted);
+      line-height:1.5;
+      font-size:15px;
+      border-radius:8px;
+    }
+
+    /* Noticias */
+    .news{
+      background:rgba(255,255,255,0.02);
+      padding:12px;
+      border-radius:8px;
+    }
+    .news h3{margin:0 0 8px 0;color:var(--accent)}
+    .news article{padding:10px 0;border-top:1px dashed rgba(255,255,255,0.03)}
+    .news article:first-of-type{border-top:0;padding-top:0}
+
+    /* Columna derecha */
+    .side{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .panel{
+      background:rgba(255,255,255,0.02);
+      padding:12px;
+      border-radius:8px;
+    }
+    .friends .friend{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      padding:8px 0;
+      border-bottom:1px solid rgba(255,255,255,0.02);
+    }
+    .friends .friend:last-child{border-bottom:0}
+    .friend img{width:40px;height:40px;border-radius:6px;object-fit:cover}
+
+    .achievements .bar{
+      height:10px;
+      background:rgba(255,255,255,0.04);
+      border-radius:6px;
+      overflow:hidden;
+      margin-top:8px;
+    }
+    .achievements .bar > i{
+      display:block;
+      height:100%;
+      background:linear-gradient(90deg,var(--accent), #ff8a80);
+      width:46%;
+    }
+
+    footer.sitefoot{
+      margin-top:22px;
+      text-align:center;
+      color:#9b9b9b;
+      font-size:13px;
+    }
+
+    /* Responsive */
+    @media (max-width:1000px){
+      .main-grid{grid-template-columns:1fr}
+      .game-body{grid-template-columns:1fr}
+      .banner{height:220px}
+      .banner-left img.logo-small{width:96px;height:96px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Header -->
+    <header class="sitebar" role="banner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">DbN</div>
+        <div>
+          <h1>DEAD BY NIGHTLIGHT</h1>
+          <div style="font-size:12px;color:var(--muted)">Página oficial del juego</div>
+        </div>
+      </div>
+
+      <nav class="navlinks" aria-label="Navegación principal">
+        <a href="#" title="Inicio">Inicio</a>
+        <a href="#" title="Foro">Foro</a>
+        <a href="#" title="Tienda">Tienda</a>
+      </nav>
+    </header>
+
+    <!-- Grid principal -->
+    <div class="main-grid">
+
+      <!-- Ficha del juego -->
+      <section class="game-card" aria-labelledby="titulo-juego">
+
+        <!-- Banner: reemplaza banner.jpg por tu imagen -->
+        <div class="banner" id="banner" style="background-image:url('banner.jpg');">
+          <div class="banner-overlay" aria-hidden="true"></div>
+
+          <div class="banner-content">
+            <div class="banner-left">
+              <img src="logo_small.png" alt="Logo del juego" class="logo-small" />
+              <div class="meta">
+                <h2 id="titulo-juego">Dead By NightLight</h2>
+                <p id="subtitulo">New Update Available! • April 13th, 2026</p>
+                <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
+                  <!-- PEGI badge placeholder -->
+                  <img id="pegi-badge" src="pegi18.png" alt="PEGI +9" style="height:36px;border-radius:6px;object-fit:contain" />
+                  <div style="font-size:13px;color:#d0d0d0">Action • Horror • Multiplayer • Asymetrical</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="actions" aria-hidden="false">
+              <button class="btn" id="installBtn" aria-pressed="false">
+                <!-- Icono simple -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="opacity:0.95"><path d="M12 2v14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 9l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Play
+              </button>
+
+              <button class="btn secondary" id="audioToggle" title="Play Music / Pause Music">
+                🔊 Música
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info rápida -->
+        <div style="padding:16px;">
+          <div class="info-row" role="list">
+            <div class="info-card" role="listitem">
+              <span class="label">LAST GAME UPDATE</span>
+              <strong id="ultima-update-juego">April 13th, 2026</strong>
+            </div>
+
+            <div class="info-card" role="listitem">
+              <span class="label">LAST WEB UPDATE</span>
+              <strong id="ultima-update-web">April 18th, 2026</strong>
+            </div>
+          </div>
+
+          <!-- Cuerpo con descripción y noticias -->
+          <div class="game-body" style="margin-top:14px;">
+            <div>
+              <div class="description">
+                <h3 style="color:var(--accent);margin-top:0">What is Dead By NightLight?</h3>
+                <p>👻 Dead By NightLight is an asymmetrical horror game where fear is always watching you… 👀
+
+🎮 4 Survivors vs 1 Killer face off across 3 terrifying maps:
+🪓 a dark Wood Factory
+🧪 a cold National Laboratory
+🏛  or the background of an underground map.
+
+🛠️ Survivors’ Objective:
+Repair 5 computers out of 7 to unlock an exit door and escape alive 🏃‍♂️💨
+Work as a team, stay quiet, and don’t get caught!
+
+🔪 Killer’s Objective:
+Hunt down all Survivors and lock them inside freezers 🧊
+Keep them trapped until they succumb to the cold… escaping won’t be easy 😈
+
+😱 Hide, run, repair, or hunt — every match is different!
+Do you have what it takes to survive the night… or rule the terror?
+
+✨ Play now and choose your destiny! ✨</p>
+
+                <h4 style="color:var(--accent);margin-bottom:8px">Registro de Parches</h4>
+                <ul>
+                  <li><a href="#" style="color:var(--accent)">Julio 2025</a></li>
+                  <li><a href="#" style="color:var(--accent)">Agosto 2025</a></li>
+                  <li><a href="#" style="color:var(--accent)">Septiembre 2025</a></li>
+                  <li><a href="#" style="color:var(--accent)">Octubre 2025</a></li>
+                  <li><a href="#" style="color:var(--accent)">Noviembre 2025 [ACTUAL]</a></li>
+                </ul>
+              </div>
+
+              <div class="news" style="margin-top:12px;">
+                <h3>Noticias</h3>
+                <article>
+                  <strong>THE GRIMOIRE - Preguntas para el Q&A</strong>
+                  <div style="font-size:13px;color:#cfcfcf;margin-top:6px">Viernes 1 Mayo</div>
+                  <p style="margin-top:8px;color:#d0d0d0">Deja tus preguntas en el foro oficial para la próxima sesión de preguntas y respuestas.</p>
+                </article>
+
+                <article>
+                  <strong>Evento de Halloween - Resumen</strong>
+                  <div style="font-size:13px;color:#cfcfcf;margin-top:6px">4 Noviembre 2025</div>
+                  <p style="margin-top:8px;color:#d0d0d0">Resumen de lo ocurrido y próximos pasos del equipo.</p>
+                </article>
+              </div>
+            </div>
+
+            <!-- Columna interna derecha dentro de la ficha -->
+            <aside style="min-width:260px;">
+              <div class="panel">
+                <h4 style="margin:0 0 8px 0;color:var(--accent)">Recomendación</h4>
+                <p style="margin:0;color:#d0d0d0">Would you recommend this game to your friends?</p>
+                <div style="display:flex;gap:8px;margin-top:10px">
+                  <button class="btn secondary" style="flex:1">Yes</button>
+                  <button class="btn secondary" style="flex:1">No</button>
+                </div>
+              </div>
+
+              <div class="panel" style="margin-top:12px">
+                <h4 style="margin:0 0 8px 0;color:var(--accent)">Logros</h4>
+                <div class="achievements">
+                  <div style="font-size:13px;color:#d0d0d0">You have unlocked <strong>0/4</strong> (0%)</div>
+                  <div class="bar" aria-hidden="true"><i></i></div>
+                  <div style="margin-top:8px;font-size:13px;color:#cfcfcf">Last achievement: <strong> </strong></div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Columna derecha general -->
+      <aside class="side" aria-label="Columna lateral">
+        <div class="panel friends">
+          <h4 style="margin:0 0 8px 0;color:var(--accent)">Amigos que jugaron</h4>
+          <div class="friend"><img src="friend1.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Amigo1 • 12 h</div></div>
+          <div class="friend"><img src="friend2.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Amigo2 • 3 h</div></div>
+        </div>
+
+        <div class="panel">
+          <h4 style="margin:0 0 8px 0;color:var(--accent)">Requisitos</h4>
+          <ul style="margin:0;padding-left:18px;color:#d0d0d0;font-size:13px">
+            <li>Sistema operativo: Windows 10</li>
+            <li>Procesador: Intel i5</li>
+            <li>Memoria: 8 GB RAM</li>
+            <li>Gráficos: GTX 960</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h4 style="margin:0 0 8px 0;color:var(--accent)">Enlaces</h4>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <a href="#" style="color:var(--accent)">Foro oficial</a>
+            <a href="#" style="color:var(--accent)">Soporte</a>
+            <a href="#" style="color:var(--accent)">Discord</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="sitefoot" role="contentinfo">
+      <div>&copy; 2025 Dead By NightLight // Adeveloper_games. Todos los derechos reservados.</div>
+      <div style="margin-top:6px">Síguenos en
+        <a href="#" style="color:var(--accent)">YouTube</a> |
+        <a href="#" style="color:#1DA1F2">X</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Audio oculto con control -->
+  <audio id="bg-audio" src="Canción de la tienda de DbN.mp3" loop preload="auto"></audio>
+
+  <script>
+    // Datos dinámicos: cambia estos valores desde tu backend o inline
+    const DATA = {
+      espacio: "56.57 GB",
+      ultimaSesion: "Ayer",
+      tiempoJuego: "256.3 h",
+      ultimaUpdateJuego: "4 Nov 2025",
+      ultimaUpdateWeb: "4 Nov 2025",
+      pegiSrc: "pegi18.png", // sustituye por la ruta de tu badge PEGI
+      bannerSrc: "banner.jpg", // sustituye por tu banner
+      logoSmall: "logo_small.png"
+    };
+
+    // Rellenar campos
+    document.getElementById('espacio').textContent = DATA.espacio;
+    document.getElementById('ultima-sesion').textContent = DATA.ultimaSesion;
+    document.getElementById('tiempo-juego').textContent = DATA.tiempoJuego;
+    document.getElementById('ultima-update-juego').textContent = DATA.ultimaUpdateJuego;
+    document.getElementById('ultima-update-web').textContent = DATA.ultimaUpdateWeb;
+    document.getElementById('pegi-badge').src = DATA.pegiSrc;
+    document.getElementById('banner').style.backgroundImage = `url('${DATA.bannerSrc}')`;
+    document.querySelector('.logo-small').src = DATA.logoSmall;
+
+    // Botón instalar (simulación)
+    document.getElementById('installBtn').addEventListener('click', function(){
+      this.textContent = 'Instalando...';
+      this.disabled = true;
+      setTimeout(()=>{ this.textContent = 'Instalado'; this.style.opacity=0.9 }, 1500);
+    });
+
+    // Control de audio
+    const audio = document.getElementById('bg-audio');
+    const audioBtn = document.getElementById('audioToggle');
+    let audioPlaying = false;
+    audioBtn.addEventListener('click', () => {
+      if(!audioPlaying){
+        audio.play().catch(()=>{ /* autoplay bloqueado */ });
+        audioBtn.textContent = '🔈 Pausar';
+      } else {
+        audio.pause();
+        audioBtn.textContent = '🔊 Música';
+      }
+      audioPlaying = !audioPlaying;
+    });
+
+    // Mejora: si quieres que los valores vengan del servidor, reemplaza DATA por fetch('/api/gameinfo')...
+  </script>
+</body>
+</html>
