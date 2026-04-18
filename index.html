@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dead By NightLight - Página Oficial</title>
+  <title>Dead By NightLight - Official Page</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -12,8 +12,8 @@
       --bg:#0b0b0b;
       --panel:#111214;
       --muted:#bfbfbf;
-      --accent:#f44336; /* cambia aquí el color principal */
-      --accent-2:#1db954; /* color secundario tipo Steam si quieres */
+      --accent:#f44336;
+      --accent-2:#1db954;
       --glass: rgba(255,255,255,0.03);
       --radius:10px;
       --max-width:1200px;
@@ -31,14 +31,12 @@
       padding-bottom:40px;
     }
 
-    /* Contenedor central */
     .wrap{
       max-width:var(--max-width);
       margin:28px auto;
       padding:20px;
     }
 
-    /* Header */
     header.sitebar{
       display:flex;
       align-items:center;
@@ -79,7 +77,6 @@
       opacity:0.9;
     }
 
-    /* Layout principal */
     .main-grid{
       display:grid;
       grid-template-columns: 1fr 320px;
@@ -87,7 +84,6 @@
       align-items:start;
     }
 
-    /* Columna izquierda: ficha */
     .game-card{
       background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
       border-radius:var(--radius);
@@ -95,7 +91,6 @@
       box-shadow: 0 8px 30px rgba(0,0,0,0.6);
     }
 
-    /* Banner */
     .banner{
       position:relative;
       height:320px;
@@ -143,7 +138,6 @@
     }
     .banner-left p{margin:0;font-size:13px;color:#cfcfcf;opacity:0.9}
 
-    /* Panel de acciones */
     .actions{
       display:flex;
       gap:12px;
@@ -171,7 +165,6 @@
       padding:10px 14px;
     }
 
-    /* Info rápida tipo Steam */
     .info-row{
       display:flex;
       gap:12px;
@@ -193,7 +186,6 @@
     .info-card strong{color:#fff;font-weight:700}
     .info-card .label{font-size:12px;color:#bdbdbd}
 
-    /* Contenido principal debajo del banner */
     .game-body{
       padding:18px;
       display:grid;
@@ -209,7 +201,6 @@
       border-radius:8px;
     }
 
-    /* Noticias */
     .news{
       background:rgba(255,255,255,0.02);
       padding:12px;
@@ -219,7 +210,6 @@
     .news article{padding:10px 0;border-top:1px dashed rgba(255,255,255,0.03)}
     .news article:first-of-type{border-top:0;padding-top:0}
 
-    /* Columna derecha */
     .side{
       display:flex;
       flex-direction:column;
@@ -279,15 +269,9 @@
         <div class="logo" aria-hidden="true">DbN</div>
         <div>
           <h1>DEAD BY NIGHTLIGHT</h1>
-          <div style="font-size:12px;color:var(--muted)">Página oficial del juego</div>
+          <div style="font-size:12px;color:var(--muted)">Offial Game Page</div>
         </div>
       </div>
-
-      <nav class="navlinks" aria-label="Navegación principal">
-        <a href="#" title="Inicio">Inicio</a>
-        <a href="#" title="Foro">Foro</a>
-        <a href="#" title="Tienda">Tienda</a>
-      </nav>
     </header>
 
     <!-- Grid principal -->
@@ -297,12 +281,12 @@
       <section class="game-card" aria-labelledby="titulo-juego">
 
         <!-- Banner: reemplaza banner.jpg por tu imagen -->
-        <div class="banner" id="banner" style="background-image:url('banner.jpg');">
+        <div class="banner" id="banner" style="background-image:url('MAIN_WEB_BANNER.jpg');">
           <div class="banner-overlay" aria-hidden="true"></div>
 
           <div class="banner-content">
             <div class="banner-left">
-              <img src="logo_small.png" alt="Logo del juego" class="logo-small" />
+              <img src="MAIN_GAME_LOGO.png" alt="Logo del juego" class="logo-small" />
               <div class="meta">
                 <h2 id="titulo-juego">Dead By NightLight</h2>
                 <p id="subtitulo">New Update Available • April 13th, 2026</p>
