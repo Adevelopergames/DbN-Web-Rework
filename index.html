@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dead By NightLight - Página Oficial</title>
 
-  <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -306,11 +305,11 @@
               <img src="logo_small.png" alt="Logo del juego" class="logo-small" />
               <div class="meta">
                 <h2 id="titulo-juego">Dead By NightLight</h2>
-                <p id="subtitulo">New Update Available! • April 13th, 2026</p>
+                <p id="subtitulo">New Update Available • April 13th, 2026</p>
                 <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
                   <!-- PEGI badge placeholder -->
                   <img id="pegi-badge" src="pegi18.png" alt="PEGI +9" style="height:36px;border-radius:6px;object-fit:contain" />
-                  <div style="font-size:13px;color:#d0d0d0">Action • Horror • Multiplayer • Asymetrical</div>
+                  <div style="font-size:13px;color:#d0d0d0">Asymetrical • Horror • Multiplayer • Action</div>
                 </div>
               </div>
             </div>
@@ -421,27 +420,23 @@ Do you have what it takes to survive the night… or rule the terror?
       <!-- Columna derecha general -->
       <aside class="side" aria-label="Columna lateral">
         <div class="panel friends">
-          <h4 style="margin:0 0 8px 0;color:var(--accent)">Amigos que jugaron</h4>
-          <div class="friend"><img src="friend1.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Amigo1 • 12 h</div></div>
-          <div class="friend"><img src="friend2.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Amigo2 • 3 h</div></div>
-        </div>
-
-        <div class="panel">
-          <h4 style="margin:0 0 8px 0;color:var(--accent)">Requisitos</h4>
-          <ul style="margin:0;padding-left:18px;color:#d0d0d0;font-size:13px">
-            <li>Sistema operativo: Windows 10</li>
-            <li>Procesador: Intel i5</li>
-            <li>Memoria: 8 GB RAM</li>
-            <li>Gráficos: GTX 960</li>
-          </ul>
+          <h4 style="margin:0 0 8px 0;color:var(--accent)">Development Team</h4>
+          <div class="friend"><img src="friend1.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Adeveloper_games • Owner, Programmer and UI Designer</div></div>
+          <div class="friend"><img src="friend2.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Alberto_dev • Head Builder</div></div>
+          <div class="friend"><img src="friend3.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Kode_games • Builder</div></div>
+          <div class="friend"><img src="friend4.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">virus_dev • Animator</div></div>
+          <div class="friend"><img src="friend5.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">fishdci • Test Builder</div></div>
+          <div class="friend"><img src="friend6.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Haker_face • Test Builder</div></div>
+          <div class="friend"><img src="friend7.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">A&LOW • Graphic Designer</div></div>
+          <div class="friend"><img src="friend8.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Albyonyx • Graphic Designer</div></div>
         </div>
 
         <div class="panel">
           <h4 style="margin:0 0 8px 0;color:var(--accent)">Enlaces</h4>
           <div style="display:flex;flex-direction:column;gap:6px">
-            <a href="#" style="color:var(--accent)">Foro oficial</a>
-            <a href="#" style="color:var(--accent)">Soporte</a>
-            <a href="#" style="color:var(--accent)">Discord</a>
+            <a href="https://www.roblox.com/share/g/215604574" style="color:var(--accent)">Roblox Group</a>
+            <a href="https://www.youtube.com/@Adeveloper_games" style="color:var(--accent)">YouTube</a>
+            <a href="https://discord.gg/nxQEMzbbPg" style="color:var(--accent)">Discord</a>
           </div>
         </div>
       </aside>
@@ -450,10 +445,9 @@ Do you have what it takes to survive the night… or rule the terror?
 
     <!-- Footer -->
     <footer class="sitefoot" role="contentinfo">
-      <div>&copy; 2025 Dead By NightLight // Adeveloper_games. Todos los derechos reservados.</div>
-      <div style="margin-top:6px">Síguenos en
-        <a href="#" style="color:var(--accent)">YouTube</a> |
-        <a href="#" style="color:#1DA1F2">X</a>
+      <div>&copy; Dead By NightLight © 2021 - 2027 // Adeveloper_games. All Rights Reserved.</div>
+      <div style="margin-top:6px">Follow me on
+        <a href="https://www.youtube.com/@Adeveloper_games" style="color:var(--accent)">YouTube</a>
       </div>
     </footer>
 
@@ -463,35 +457,6 @@ Do you have what it takes to survive the night… or rule the terror?
   <audio id="bg-audio" src="Canción de la tienda de DbN.mp3" loop preload="auto"></audio>
 
   <script>
-    // Datos dinámicos: cambia estos valores desde tu backend o inline
-    const DATA = {
-      espacio: "56.57 GB",
-      ultimaSesion: "Ayer",
-      tiempoJuego: "256.3 h",
-      ultimaUpdateJuego: "4 Nov 2025",
-      ultimaUpdateWeb: "4 Nov 2025",
-      pegiSrc: "pegi18.png", // sustituye por la ruta de tu badge PEGI
-      bannerSrc: "banner.jpg", // sustituye por tu banner
-      logoSmall: "logo_small.png"
-    };
-
-    // Rellenar campos
-    document.getElementById('espacio').textContent = DATA.espacio;
-    document.getElementById('ultima-sesion').textContent = DATA.ultimaSesion;
-    document.getElementById('tiempo-juego').textContent = DATA.tiempoJuego;
-    document.getElementById('ultima-update-juego').textContent = DATA.ultimaUpdateJuego;
-    document.getElementById('ultima-update-web').textContent = DATA.ultimaUpdateWeb;
-    document.getElementById('pegi-badge').src = DATA.pegiSrc;
-    document.getElementById('banner').style.backgroundImage = `url('${DATA.bannerSrc}')`;
-    document.querySelector('.logo-small').src = DATA.logoSmall;
-
-    // Botón instalar (simulación)
-    document.getElementById('installBtn').addEventListener('click', function(){
-      this.textContent = 'Instalando...';
-      this.disabled = true;
-      setTimeout(()=>{ this.textContent = 'Instalado'; this.style.opacity=0.9 }, 1500);
-    });
-
     // Control de audio
     const audio = document.getElementById('bg-audio');
     const audioBtn = document.getElementById('audioToggle');
@@ -499,15 +464,13 @@ Do you have what it takes to survive the night… or rule the terror?
     audioBtn.addEventListener('click', () => {
       if(!audioPlaying){
         audio.play().catch(()=>{ /* autoplay bloqueado */ });
-        audioBtn.textContent = '🔈 Pausar';
+        audioBtn.textContent = '🔈 Pause Music';
       } else {
         audio.pause();
-        audioBtn.textContent = '🔊 Música';
+        audioBtn.textContent = '🔊 Play Music';
       }
       audioPlaying = !audioPlaying;
     });
-
-    // Mejora: si quieres que los valores vengan del servidor, reemplaza DATA por fetch('/api/gameinfo')...
   </script>
 </body>
 </html>
