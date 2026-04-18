@@ -292,7 +292,7 @@
                 <p id="subtitulo">New Update Available • April 13th, 2026</p>
                 <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
                   <!-- PEGI badge placeholder -->
-                  <img id="pegi-badge" src="MAIN_GAME_PEGI.jpg" alt="PEGI +9" style="height:36px;border-radius:6px;object-fit:contain" />
+                  <img id="pegi-badge" src="MAIN_GAME_PEGI.jpg" alt="PEGI +7" style="height:36px;border-radius:6px;object-fit:contain" />
                   <div style="font-size:13px;color:#d0d0d0">Asymetrical • Horror • Multiplayer • Action</div>
                 </div>
               </div>
@@ -393,10 +393,10 @@ Do you have what it takes to survive the night… or rule the terror?
           <div class="friend"><img src="friend2.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Alberto_dev • Head Builder</div></div>
           <div class="friend"><img src="friend3.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Kode_games • Builder</div></div>
           <div class="friend"><img src="friend4.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">virus_dev • Animator</div></div>
-          <div class="friend"><img src="friend5.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">fishdci • Test Builder</div></div>
-          <div class="friend"><img src="friend6.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Haker_face • Test Builder</div></div>
-          <div class="friend"><img src="friend7.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">A&LOW • Graphic Designer</div></div>
-          <div class="friend"><img src="friend8.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Albyonyx • Graphic Designer</div></div>
+          <div class="friend"><img src="friend5.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">A&LOW • Graphic Designer</div></div>
+          <div class="friend"><img src="friend6.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Albyonyx • Graphic Designer</div></div>
+          <div class="friend"><img src="friend7.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">fishdci • Test Builder</div></div>
+          <div class="friend"><img src="friend8.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Haker_face • Test Builder</div></div>
         </div>
 
         <div class="panel">
@@ -428,7 +428,7 @@ Do you have what it takes to survive the night… or rule the terror?
     // Control de audio
     const audio = document.getElementById('bg-audio');
     const audioBtn = document.getElementById('audioToggle');
-    let audioPlaying = false;
+    let audioPlaying = true;
     audioBtn.addEventListener('click', () => {
       if(!audioPlaying){
         audio.play().catch(()=>{ /* autoplay bloqueado */ });
