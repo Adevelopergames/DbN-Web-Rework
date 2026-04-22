@@ -44,11 +44,13 @@
       gap:16px;
       margin-bottom:18px;
     }
+
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
     }
+
     .brand .logo{
       width:56px;
       height:56px;
@@ -62,19 +64,13 @@
       font-size:18px;
       letter-spacing:1px;
     }
+
     .brand h1{
       margin:0;
       font-family: "Oswald", sans-serif;
       font-size:20px;
       color:var(--accent);
       letter-spacing:1px;
-    }
-    .navlinks a{
-      color:var(--muted);
-      text-decoration:none;
-      margin-left:14px;
-      font-weight:600;
-      opacity:0.9;
     }
 
     .main-grid{
@@ -99,11 +95,13 @@
       align-items:flex-end;
       padding:18px;
     }
+
     .banner .banner-overlay{
       position:absolute;
       inset:0;
       background: linear-gradient(180deg, rgba(0,0,0,0.0) 30%, rgba(0,0,0,0.7) 100%);
     }
+
     .banner .banner-content{
       position:relative;
       z-index:2;
@@ -119,6 +117,7 @@
       gap:12px;
       align-items:center;
     }
+
     .banner-left img.logo-small{
       width:120px;
       height:120px;
@@ -127,22 +126,31 @@
       border:2px solid rgba(255,255,255,0.04);
       background:var(--glass);
     }
+
     .banner-left .meta{
       color:var(--muted);
     }
+
     .banner-left h2{
       margin:0 0 6px 0;
       color:var(--accent);
       font-family:"Oswald",sans-serif;
       font-size:22px;
     }
-    .banner-left p{margin:0;font-size:13px;color:#cfcfcf;opacity:0.9}
+
+    .banner-left p{
+      margin:0;
+      font-size:13px;
+      color:#cfcfcf;
+      opacity:0.9
+    }
 
     .actions{
       display:flex;
       gap:12px;
       align-items:center;
     }
+
     .btn{
       background:linear-gradient(180deg,var(--accent), #b32b2b);
       color:white;
@@ -157,6 +165,7 @@
       border: none;
       cursor:pointer;
     }
+
     .btn.secondary{
       background:transparent;
       color:var(--muted);
@@ -172,6 +181,7 @@
       align-items:center;
       flex-wrap:wrap;
     }
+
     .info-card{
       background:rgba(255,255,255,0.02);
       padding:10px 12px;
@@ -183,14 +193,20 @@
       flex-direction:column;
       gap:6px;
     }
-    .info-card strong{color:#fff;font-weight:700}
-    .info-card .label{font-size:12px;color:#bdbdbd}
+
+    .info-card strong{
+      color:#fff;
+      font-weight:700
+    }
+
+    .info-card .label{
+      font-size:12px;
+      color:#bdbdbd
+    }
 
     .game-body{
       padding:18px;
-      display:grid;
-      grid-template-columns: 1fr 320px;
-      gap:18px;
+      display:block;
     }
 
     .description{
@@ -201,25 +217,28 @@
       border-radius:8px;
     }
 
-    .news{
-      background:rgba(255,255,255,0.02);
-      padding:12px;
-      border-radius:8px;
+    .description h3{
+      color:var(--accent);
+      margin-top:0;
     }
-    .news h3{margin:0 0 8px 0;color:var(--accent)}
-    .news article{padding:10px 0;border-top:1px dashed rgba(255,255,255,0.03)}
-    .news article:first-of-type{border-top:0;padding-top:0}
+
+    .description h4{
+      color:var(--accent);
+      margin-bottom:8px;
+    }
 
     .side{
       display:flex;
       flex-direction:column;
       gap:12px;
     }
+
     .panel{
       background:rgba(255,255,255,0.02);
       padding:12px;
       border-radius:8px;
     }
+
     .friends .friend{
       display:flex;
       gap:10px;
@@ -227,8 +246,17 @@
       padding:8px 0;
       border-bottom:1px solid rgba(255,255,255,0.02);
     }
-    .friends .friend:last-child{border-bottom:0}
-    .friend img{width:40px;height:40px;border-radius:6px;object-fit:cover}
+
+    .friends .friend:last-child{
+      border-bottom:0
+    }
+
+    .friend img{
+      width:40px;
+      height:40px;
+      border-radius:6px;
+      object-fit:cover
+    }
 
     .achievements .bar{
       height:10px;
@@ -237,6 +265,7 @@
       overflow:hidden;
       margin-top:8px;
     }
+
     .achievements .bar > i{
       display:block;
       height:100%;
@@ -254,7 +283,6 @@
     /* Responsive */
     @media (max-width:1000px){
       .main-grid{grid-template-columns:1fr}
-      .game-body{grid-template-columns:1fr}
       .banner{height:220px}
       .banner-left img.logo-small{width:96px;height:96px}
     }
@@ -269,7 +297,7 @@
         <div class="logo" aria-hidden="true">DbN</div>
         <div>
           <h1>DEAD BY NIGHTLIGHT</h1>
-          <div style="font-size:12px;color:var(--muted)">Offial Game Page</div>
+          <div style="font-size:12px;color:var(--muted)">Official Game Page</div>
         </div>
       </div>
     </header>
@@ -280,7 +308,7 @@
       <!-- Ficha del juego -->
       <section class="game-card" aria-labelledby="titulo-juego">
 
-        <!-- Banner: reemplaza banner.jpg por tu imagen -->
+        <!-- Banner -->
         <div class="banner" id="banner" style="background-image:url('Primera Captura Profesional - Piso Superior del Laboratorio Nacional.png');">
           <div class="banner-overlay" aria-hidden="true"></div>
 
@@ -289,32 +317,33 @@
               <img src="MAIN_GAME_LOGO.png" alt="Logo del juego" class="logo-small" />
               <div class="meta">
                 <h2 id="titulo-juego">Dead By NightLight</h2>
-                <p id="subtitulo">New Update Available • April 13th, 2026</p>
+                <p id="subtitulo">VR SUPPORT! - AVAILABLE NOW</p>
                 <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
-                  <!-- PEGI badge placeholder -->
                   <img id="pegi-badge" src="MAIN_GAME_PEGI.jpg" alt="PEGI +7" style="height:36px;border-radius:6px;object-fit:contain" />
                   <div style="font-size:13px;color:#d0d0d0">Asymetrical • Horror • Multiplayer</div>
                 </div>
               </div>
             </div>
 
-            <a href="https://www.roblox.com/games/83394339399379/Dead-By-NightLight-v1-5-0" 
-              class="btn" 
-              id="installBtn" 
-              role="button" 
-              aria-pressed="false"
-              target="_blank">
-              
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="opacity:0.95">
-                <path d="M12 2v14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M5 9l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              
-              Play Now
-            </a>
+            <div class="actions">
+              <a href="https://www.roblox.com/games/83394339399379/Dead-By-NightLight-v1-5-1"
+                class="btn"
+                id="installBtn"
+                role="button"
+                aria-pressed="false"
+                target="_blank"
+                rel="noopener noreferrer">
 
-              <button class="btn secondary" id="audioToggle" title="Play Music / Pause Music">
-                🔊 Turn On the Music
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="opacity:0.95">
+                  <path d="M12 2v14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M5 9l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                Play Now
+              </a>
+
+              <button class="btn secondary" id="audioToggle" title="Play Music / Pause Music" type="button">
+                🔊 Play Music
               </button>
             </div>
           </div>
@@ -325,129 +354,138 @@
           <div class="info-row" role="list">
             <div class="info-card" role="listitem">
               <span class="label">LAST GAME UPDATE</span>
-              <strong id="ultima-update-juego">April 13th, 2026</strong>
+              <strong id="ultima-update-juego">April 21th, 2026</strong>
             </div>
 
             <div class="info-card" role="listitem">
               <span class="label">LAST WEB UPDATE</span>
-              <strong id="ultima-update-web">April 20th, 2026</strong>
+              <strong id="ultima-update-web">April 22th, 2026</strong>
             </div>
           </div>
 
-          <!-- Cuerpo con descripción y noticias -->
+          <!-- Cuerpo con descripción -->
           <div class="game-body" style="margin-top:14px;">
-            <div>
-              <div class="description">
-                <h3 style="color:var(--accent);margin-top:0">What is Dead By NightLight?</h3>
-                <p>
-                  👻 Dead By NightLight is an asymmetrical horror game where fear is always watching you… 👀<br><br>
-                  
-                  🎮 4 Survivors vs 1 Killer face off across 3 terrifying maps:<br>
-                  🪓 A dark Wood Factory<br>
-                  🧪 A cold National Laboratory<br>
-                  🏛 An underground environment<br><br>
-                  
-                  🛠️ Survivors’ Objective:<br>
-                  Repair 5 computers out of 7<br>
-                  Unlock the exit door<br>
-                  Escape alive 🏃‍♂️💨<br>
-                  Work as a team, stay quiet, and don’t get caught<br><br>
+            <div class="description">
+              <h3>What is Dead By NightLight?</h3>
+              <p>
+                👻 Dead By NightLight is an asymmetrical horror game where fear is always watching you… 👀<br><br>
 
-                  🔪 Killer’s Objective:<br>
-                  Hunt down all Survivors<br>
-                  Lock them inside freezers 🧊<br>
-                  Keep them trapped until they succumb to the cold 😈<br><br>
+                🎮 4 Survivors vs 1 Killer face off across 3 terrifying maps:<br>
+                🪓 A dark Wood Factory<br>
+                🧪 A cold National Laboratory<br>
+                🏛 An underground environment<br><br>
 
-                  😱 Hide, run, repair, or hunt — every match is different!<br><br>
+                🛠️ Survivors’ Objective:<br>
+                Repair 5 computers out of 7<br>
+                Unlock the exit door<br>
+                Escape alive 🏃‍♂️💨<br>
+                Work as a team, stay quiet, and don’t get caught<br><br>
 
-                  ✨ Play now and choose your destiny! ✨
-                </p>
+                🔪 Killer’s Objective:<br>
+                Hunt down all Survivors<br>
+                Lock them inside freezers 🧊<br>
+                Keep them trapped until they succumb to the cold 😈<br><br>
 
-                <h4 style="color:var(--accent);margin-bottom:8px">Update Logs since November 25</h4>
-                <ul>
-                  <li><a href="#" style="color:var(--accent)">November 25</a></li>
-                  <li><a href="#" style="color:var(--accent)">December 25</a></li>
-                  <li><a href="#" style="color:var(--accent)">January 26</a></li>
-                  <li><a href="#" style="color:var(--accent)">February 26</a></li>
-                  <li><a href="#" style="color:var(--accent)">March 26</a></li>
-                  <li><a href="#" style="color:var(--accent)">April 26 [CURRENTLY]</a></li>
-                </ul>
-              </div>
+                😱 Hide, run, repair, or hunt — every match is different!<br><br>
 
-            <aside style="min-width:260px;">
-              <div class="panel">
-                <h4 style="margin:0 0 8px 0;color:var(--accent)">Recommendation</h4>
-                <p style="margin:0;color:#d0d0d0">Would you recommend this game to your friends?</p>
-                <div style="display:flex;gap:8px;margin-top:10px">
-                  <button class="btn secondary" style="flex:1">Yes</button>
-                  <button class="btn secondary" style="flex:1">No</button>
-                </div>
-              </div>
-
-              <div class="panel" style="margin-top:12px">
-                <h4 style="margin:0 0 8px 0;color:var(--accent)">Logros</h4>
-                <div class="achievements">
-                  <div style="font-size:13px;color:#d0d0d0">You have unlocked <strong>0/4</strong> (0%)</div>
-                  <div class="bar" aria-hidden="false"><i></i></div>
-                  <div style="margin-top:8px;font-size:13px;color:#cfcfcf">Last achievement: <strong> </strong></div>
-                </div>
-              </div>
-            </aside>
+                ✨ Play now and choose your destiny! ✨
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Columna derecha general -->
+      <!-- Columna derecha -->
       <aside class="side" aria-label="Columna lateral">
+
+        <div class="panel">
+          <h4 style="margin:0 0 8px 0;color:var(--accent)">Update Logs</h4>
+          <ul style="padding-left:18px;margin:0">
+            <li><a href="#" style="color:var(--accent)">November 25</a></li>
+            <li><a href="#" style="color:var(--accent)">December 25</a></li>
+            <li><a href="#" style="color:var(--accent)">January 26</a></li>
+            <li><a href="#" style="color:var(--accent)">February 26</a></li>
+            <li><a href="#" style="color:var(--accent)">March 26</a></li>
+            <li><a href="#" style="color:var(--accent)">April 13-04-26</a></li>
+            <li><a href="#" style="color:var(--accent)">April 2nd Patch [CURRENTLY]</a></li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h4 style="margin:0 0 8px 0;color:var(--accent)">Recommendation</h4>
+          <p style="margin:0;color:#d0d0d0">Would you recommend this game to your friends?</p>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button class="btn secondary" style="flex:1" type="button">Yes</button>
+            <button class="btn secondary" style="flex:1" type="button">No</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h4 style="margin:0 0 8px 0;color:var(--accent)">Achievements</h4>
+          <div class="achievements">
+            <div style="font-size:13px;color:#d0d0d0">You have unlocked <strong>0/4</strong> (0%)</div>
+            <div class="bar" aria-hidden="true"><i></i></div>
+            <div style="margin-top:8px;font-size:13px;color:#cfcfcf">Last achievement: <strong></strong></div>
+          </div>
+        </div>
+
         <div class="panel friends">
           <h4 style="margin:0 0 8px 0;color:var(--accent)">Development Team</h4>
-          <div class="friend"><img src="friend1.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Adeveloper_games • Owner</div></div>
-          <div class="friend"><img src="friend2.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Alberto_dev • Head Builder</div></div>
-          <div class="friend"><img src="friend3.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Kode_games • Builder</div></div>
-          <div class="friend"><img src="friend4.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">virus_dev • Animator</div></div>
-          <div class="friend"><img src="friend5.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">A&LOW • Graphic Designer</div></div>
-          <div class="friend"><img src="friend6.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Albyonyx • Graphic Designer</div></div>
-          <div class="friend"><img src="friend7.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">fishdci • Test Builder</div></div>
-          <div class="friend"><img src="friend8.jpg" alt="Avatar amigo"><div style="font-size:13px;color:#d0d0d0">Haker_face • Test Builder</div></div>
+          <div class="friend"><img src="friend1.png" alt="Avatar de Adeveloper_games"><div style="font-size:13px;color:#d0d0d0">Adeveloper_games • Owner</div></div>
+          <div class="friend"><img src="friend2.png" alt="Avatar de Alberto_dev"><div style="font-size:13px;color:#d0d0d0">Alberto_dev • Head Builder</div></div>
+          <div class="friend"><img src="friend3.png" alt="Avatar de Kode_games"><div style="font-size:13px;color:#d0d0d0">Kode_games • Builder</div></div>
+          <div class="friend"><img src="friend4.png" alt="Avatar de virus_dev"><div style="font-size:13px;color:#d0d0d0">virus_dev • Animator</div></div>
+          <div class="friend"><img src="friend5.png" alt="Avatar de A&LOW"><div style="font-size:13px;color:#d0d0d0">A&LOW • Graphic Designer</div></div>
+          <div class="friend"><img src="friend6.png" alt="Avatar de Albyonyx"><div style="font-size:13px;color:#d0d0d0">Albyonyx • Graphic Designer</div></div>
+          <div class="friend"><img src="friend7.png" alt="Avatar de fishdci"><div style="font-size:13px;color:#d0d0d0">fishdci • Test Builder</div></div>
+          <div class="friend"><img src="friend8.png" alt="Avatar de Haker_face"><div style="font-size:13px;color:#d0d0d0">Haker_face • Test Builder</div></div>
         </div>
 
         <div class="panel">
           <h4 style="margin:0 0 8px 0;color:var(--accent)">Links</h4>
           <div style="display:flex;flex-direction:column;gap:6px">
+            <a href="https://discord.gg/nxQEMzbbPg" style="color:var(--accent)">Discord</a>
             <a href="https://www.roblox.com/share/g/215604574" style="color:var(--accent)">Roblox Group</a>
             <a href="https://www.youtube.com/@Adeveloper_games" style="color:var(--accent)">YouTube</a>
-            <a href="https://discord.gg/nxQEMzbbPg" style="color:var(--accent)">Discord</a>
           </div>
         </div>
-      </aside>
 
+      </aside>
     </div>
 
     <!-- Footer -->
     <footer class="sitefoot" role="contentinfo">
       <div>&copy; Dead By NightLight © 2021 - 2027 // Adeveloper_games. All Rights Reserved.</div>
-      <div style="margin-top:6px">Follow me on
-        <a href="https://www.youtube.com/@Adeveloper_games" style="color:var(--accent)">YouTube</a>
-      </div>
     </footer>
 
   </div>
 
-  <!-- Audio oculto con control -->
-  <audio id="bg-audio" src="Canción de la tienda de DbN.mp3" loop preload="auto"></audio>
+  <!-- Audio oculto -->
+  <audio id="bg-audio" src="Canción de la tienda de DbN.mp3" loop preload="auto" autoplay></audio>
 
   <script>
-    // Control de audio
     const audio = document.getElementById('bg-audio');
     const audioBtn = document.getElementById('audioToggle');
-    let audioPlaying = true;
-    audioBtn.addEventListener('click', () => {
-      if(!audioPlaying){
-        audio.play().catch(()=>{ /* autoplay bloqueado */ });
+    let audioPlaying = false;
+
+    window.addEventListener('load', () => {
+      audio.play().then(() => {
+        audioPlaying = true;
         audioBtn.textContent = '🔈 Pause Music';
-      } else {
+      }).catch(() => {
+        audioPlaying = false;
+        audioBtn.textContent = '🔊 Play Music';
+      });
+    });
+
+    audioBtn.addEventListener('click', () => {
+      if (audioPlaying) {
         audio.pause();
         audioBtn.textContent = '🔊 Play Music';
+      } else {
+        audio.play().then(() => {
+          audioBtn.textContent = '🔈 Pause Music';
+        }).catch(() => {});
       }
       audioPlaying = !audioPlaying;
     });
