@@ -38,54 +38,30 @@ async function initializeAuthentication() {
 }
 
 function renderLoginButton(userPanel) {
-    userPanel.innerHTML = `
-        <button id="discord-login" class="btn secondary">
-            Continue with Discord
-        </button>
-    `;
-
     const loginButton = document.getElementById("discord-login");
 
-    loginButton.addEventListener("click", () => {
+    if (!loginButton) return;
+
+    loginButton.style.display = "flex";
+
+    loginButton.onclick = () => {
         window.location.href = `${API_URL}/auth/discord`;
-    });
+    };
 }
 
 function renderLoggedUser(userPanel, user) {
     userPanel.innerHTML = `
-        <div style="
-            display:flex;
-            align-items:center;
-            gap:12px;
-            background:rgba(255,255,255,.03);
-            padding:8px 14px;
-            border-radius:10px;
-        ">
-
+        <div class="user-card">
             <img
                 src="${user.discord.avatarURL}"
                 alt="Discord Avatar"
-                style="
-                    width:42px;
-                    height:42px;
-                    border-radius:50%;
-                    object-fit:cover;
-                "
             >
-
             <div>
-                <div style="
-                    font-weight:700;
-                    color:white;
-                ">
+                <div class="user-name">
                     ${user.discord.displayName}
                 </div>
-
-                <div style="
-                    font-size:12px;
-                    color:#bfbfbf;
-                ">
-                    Connected with Discord
+                <div class="user-status">
+                    🟢 Connected with Discord
                 </div>
             </div>
         </div>
