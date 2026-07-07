@@ -1,5 +1,5 @@
 // Script de JavaScript hecho por @Adeveloper_games //
-const API_URL = "http://localhost:3000";
+const API_URL = "https://dbn-web-backend.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
     initializeAuthentication();
