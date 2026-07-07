@@ -291,6 +291,104 @@
       font-size:13px;
     }
 
+    #user-panel{
+    position:relative;
+}
+
+.discord-login{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#5865F2;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    transition:.25s;
+
+    box-shadow:0 8px 24px rgba(88,101,242,.30);
+
+}
+
+.discord-login:hover{
+
+    transform:translateY(-2px);
+
+    background:#6974f3;
+
+}
+
+.user-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:rgba(255,255,255,.05);
+
+    padding:8px 14px;
+
+    border-radius:12px;
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.user-card:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.user-card img{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    border:2px solid var(--accent);
+
+}
+
+.user-name{
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+.user-status{
+
+    color:#77ff9c;
+
+    font-size:12px;
+
+}
+
     /* Responsive */
     @media (max-width:1000px){
       .main-grid{grid-template-columns:1fr}
