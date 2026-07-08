@@ -74,21 +74,20 @@ function renderLoggedUser(userPanel, user) {
 function initializeMenu() {
     const card = document.getElementById("user-card");
     const menu = document.getElementById("user-menu");
-
     if (!card || !menu) return;
     card.addEventListener("click", (event) => {
         event.stopPropagation();
         menu.classList.toggle("show");
+        card.classList.toggle("open");
     });
     document.addEventListener("click", () => {
         menu.classList.remove("show");
+        card.classList.remove("open");
     });
     menu.addEventListener("click", (event) => {
         event.stopPropagation();
     });
-
     const logout = document.getElementById("logout-button");
-    
     logout.onclick = () => {
         window.location.href = `${API_URL}/auth/logout`;
     };
