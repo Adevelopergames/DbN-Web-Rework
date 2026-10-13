@@ -58,7 +58,7 @@ function renderLoggedUser(userPanel, user) {
             </div>
         </div>
         <div class="user-menu" id="user-menu">
-            <button>👤 Dashboard</button>
+            <button id="dashboard-button">👤 Dashboard</button>
             <button>🎮 Roblox Profile</button>
             <button>🏆 Achievements</button>
             <button>⚙ Settings</button>
