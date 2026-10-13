@@ -87,6 +87,13 @@ function initializeMenu() {
     menu.addEventListener("click", (event) => {
         event.stopPropagation();
     });
+    const dashboardButton = document.getElementById("dashboard-button");
+
+if (dashboardButton) {
+    dashboardButton.addEventListener("click", () => {
+        window.location.href = "/dashboard/";
+    });
+}
     const logout = document.getElementById("logout-button");
     logout.onclick = () => {
         window.location.href = `${API_URL}/auth/logout`;
